@@ -5,8 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h1 id="title" class="main">JavaScript Calculator</h1>
+            <div class="toggle">
+                <input type="checkbox" class="checkbox" id="switch"/>
+                <label class="label" for="switch">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>  
+        </div>
+        <div class="calculator">
+            <div class="calculator__display">0</div>
+            <div class="calculator__keys">
+                <div class="calculator__row calculator--first">
+                    <button class="key--top-row" data-action="clear">AC</button>
+                    <button class="key--top-row" data-action="plusminus">&plusmn;</button>
+                    <button class="key--top-row" data-action="percentage">%</button>
+                    <button class="key--operator" data-action="divide">÷</button>
+                </div>
+                <div class="calculator__row">
+                    <button class="key--button">7</button>
+                    <button class="key--button">8</button>
+                    <button class="key--button">9</button>
+                    <button class="key--operator" data-action="multiply">x</button>
+                </div>
+                <div class="calculator__row">
+                    <button class="key--button">4</button>
+                    <button class="key--button">5</button>
+                    <button class="key--button">6</button>
+                    <button class="key--operator" data-action="subtract">-</button>
+                </div>
+                <div class="calculator__row">
+                    <button class="key--button">1</button>
+                    <button class="key--button">2</button>
+                    <button class="key--button">3</button>
+                    <button class="key--operator" data-action="add">+</button>
+                </div>
+                <div class="calculator__row">
+                    <button class="key--button key-double">0</button>
+                    <button class="key--button" data-action="decimal">.</button>
+                    <button class="key--operator" data-action="equal">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
 </body>
 </html>
